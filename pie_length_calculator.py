@@ -29,11 +29,13 @@ def calculator():
         if pie in ["pi", "Pi", "PI"]:
             pie = pi
             result = round(pie, accuracy)
-            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
+            print(f"{result} is pi rounded of to {accuracy} degrees of accuracy!")
+            break
         else:
             pie = e
             result = round(pie, accuracy)
-            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
+            print(f"{result} is e rounded of to {accuracy} degrees of accuracy!")
+            break
 
 def main():
 
