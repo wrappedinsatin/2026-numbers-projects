@@ -1,0 +1,47 @@
+# return pi/e to desired accuracy
+# set limit to how long accuracy can be
+
+from math import pi, e
+
+def calculator():
+    
+    while True:
+        print("this is the pi/e calculator!")
+        pie = input("choose between pi and e!: ")
+
+        while not pie == pi or e:
+            print(f"{pie} is not a valid option!")
+            pie = input("choose between pi and e!: ")
+
+        accuracy = input("select your degree of accuracy (max 15): ")
+        try: 
+            accuracy = int(accuracy)
+        except ValueError:
+            print(f"{accuracy} is not valid")
+            print("your accuracy must be from 0-15 s.f.")
+            continue
+
+        if pie in ["pi", "Pi", "PI"]:
+            pie = pi
+            result = round(pie, accuracy)
+            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
+        else:
+            pie = e
+            result = round(pie, accuracy)
+            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
+
+def main():
+
+    while True:
+
+        calculator()
+
+        again = input("would you like to do another calculation? (q to quit): ")
+        if input in ["quit", "q"]:
+            break
+        else:
+            print("restarted!")
+            print("")
+
+if __name__ == "__main__":
+    main()
