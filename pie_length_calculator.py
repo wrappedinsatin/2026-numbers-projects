@@ -3,9 +3,11 @@
 
 from math import pi, e
 
+calc_running = True
+
 def calculator():
     
-    while True:
+    while calc_running:
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
 
@@ -27,14 +29,14 @@ def calculator():
             continue
 
         if pie in ["pi", "Pi", "PI"]:
-            pie = pi
+            pie = "pi"
             result = round(pie, accuracy)
-            print(f"{result} is pi rounded of to {accuracy} degrees of accuracy!")
+            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
         else:
-            pie = e
+            pie = "e"
             result = round(pie, accuracy)
-            print(f"{result} is e rounded of to {accuracy} degrees of accuracy!")
+            print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
 
 def main():
@@ -45,10 +47,12 @@ def main():
 
         again = input("would you like to do another calculation? (q to quit): ")
         if input in ["quit", "q"]:
-            break
+            calc_running = False
         else:
             print("restarted!")
             print("")
+            break
+        
 
 if __name__ == "__main__":
     main()
