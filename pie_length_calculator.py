@@ -11,7 +11,7 @@ def calculator():
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
 
-        if not pie == pi or e:
+        if not (pie == pi or e):
             print(f"{pie} is not a valid option!")
             pie = input("choose between pi and e!: ")
         else:
@@ -30,12 +30,12 @@ def calculator():
 
         if pie in ["pi", "Pi", "PI"]:
             pie = "pi"
-            result = round(pie, accuracy)
+            result = round(pie, int(accuracy))
             print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
         else:
             pie = "e"
-            result = round(pie, accuracy)
+            result = round(pie, int(accuracy))
             print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
 
