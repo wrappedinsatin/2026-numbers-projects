@@ -19,6 +19,9 @@ def calculator():
         except ValueError:
             print(f"{accuracy} is not valid")
             print("your accuracy must be from 0-15 s.f.")
+        except int(accuracy) > 15:
+            print(f"{accuracy} exceeds 15!")
+            print("the degree of accuracy must not exceed 15")
             continue
 
         if pie in ["pi", "Pi", "PI"]:
