@@ -9,9 +9,11 @@ def calculator():
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
 
-        while not pie == pi or e:
+        if not pie == pi or e:
             print(f"{pie} is not a valid option!")
             pie = input("choose between pi and e!: ")
+        else:
+            continue
 
         accuracy = input("select your degree of accuracy (max 15): ")
         try: 
