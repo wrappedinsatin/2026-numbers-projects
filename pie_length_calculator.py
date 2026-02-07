@@ -11,7 +11,7 @@ def calculator():
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
 
-        if not (pie == pi or e):
+        if pie not in ("pi", "Pi", "PI", "e", "E"):
             print(f"{pie} is not a valid option!")
             pie = input("choose between pi and e!: ")
         else:
@@ -23,19 +23,26 @@ def calculator():
         except ValueError:
             print(f"{accuracy} is not valid")
             print("your accuracy must be from 0-15 s.f.")
-        except int(accuracy) > 15:
+            continue
+
+        # comparison statements can't be used in except cases
+        # an if statement is used instead
+        if int(accuracy) > 15:
             print(f"{accuracy} exceeds 15!")
             print("the degree of accuracy must not exceed 15")
+        else:
+            # continue/break allowed for if statements inside while loop
+            # code carries onto next line of code
             continue
 
         if pie in ["pi", "Pi", "PI"]:
             pie = "pi"
-            result = round(pie, int(accuracy))
+            result = round(pi, int(accuracy))
             print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
         else:
             pie = "e"
-            result = round(pie, int(accuracy))
+            result = round(e, int(accuracy))
             print(f"{result} is {pie} rounded of to {accuracy} degrees of accuracy!")
             break
 
@@ -46,12 +53,12 @@ def main():
         calculator()
 
         again = input("would you like to do another calculation? (q to quit): ")
-        if input in ["quit", "q"]:
+        if again in ["quit", "q"]: #again = variable
             calc_running = False
         else:
             print("restarted!")
             print("")
-            break
+            continue
         
 
 if __name__ == "__main__":
