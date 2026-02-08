@@ -42,6 +42,7 @@ def fibonacci():
         result = num1 + num2
         fibo_list.append(result)
         count += 1
+        continue
     # [start:end:step]
     fibo_list = fibo_list[2:]
     return fibo_list
