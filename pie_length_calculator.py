@@ -1,6 +1,8 @@
 # return pi/e to desired accuracy
 # set limit to how long accuracy can be
 
+# CODE COMPLETED
+
 from math import pi, e
 
 def calculator():
@@ -31,6 +33,8 @@ def calculator():
                 if int(accuracy) > 15:
                     print(f"{accuracy} exceeds 15!")
                     print("the degree of accuracy must not exceed 15")
+                    # you shouldn't reinsert the input code
+                    # input repeats twice before proceeding
                 elif int(accuracy) < 0:
                     print(f"{accuracy} is less than zero!")
                     print("please select an integer between 0-15.")
@@ -64,9 +68,11 @@ def main():
         again = input("would you like to do another calculation? (y to continue, q to quit): ")
         if again in ["quit", "q"]: #again = variable
             break
-        else:
+        elif again in ["Y", "y", "yes", "ok"]:
             print("restarted!")
             print("")
+        else:
+            print("please choose y or q")
         
 
 if __name__ == "__main__":
