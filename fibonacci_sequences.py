@@ -28,7 +28,8 @@ def user_inputs():
             except ValueError:
                 print(f"{sequence} was not a valid option!")
                 print("please type in an integer starting from 1.")
-                break
+                
+            break
 
 def fibonacci():
     fibo_list = []
