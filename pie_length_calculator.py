@@ -31,15 +31,14 @@ def calculator():
                 if int(accuracy) > 15:
                     print(f"{accuracy} exceeds 15!")
                     print("the degree of accuracy must not exceed 15")
-                    accuracy = input("select your degree of accuracy (max 15): ")
                 elif int(accuracy) < 0:
                     print(f"{accuracy} is less than zero!")
                     print("please select an integer between 0-15.")
-                    accuracy = input("select your degree of accuracy (max 15): ")
+                else:
+                    break
             except ValueError:
                 print(f"{accuracy} is not valid")
                 print("your accuracy must be from 0-15 s.f.")
-                accuracy = input("select your degree of accuracy (max 15): ")
 
         # comparison statements can't be used in except cases
         # an if statement is used instead
