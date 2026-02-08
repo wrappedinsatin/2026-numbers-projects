@@ -13,6 +13,12 @@ def calculator():
         pie = input("choose between pi and e!: ")
 
         while True:
+            if pie in ["q", "quit", 'exit', "end"]:
+                break
+            else:
+                continue
+
+        while True:
             if pie not in ("pi", "Pi", "PI", "e", "E"):
                 print(f"{pie} is not a valid option!")
             else:
