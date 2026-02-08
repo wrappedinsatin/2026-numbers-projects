@@ -9,7 +9,7 @@ def calculator():
     
     global calc_running
     calc_running = True
-
+    
     while calc_running:
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
@@ -73,7 +73,7 @@ def main():
             print("")
         else:
             print("please choose y or q")
-        
+            again = input("would you like to do another calculation? (y to continue, q to quit): ")
 
 if __name__ == "__main__":
     main()

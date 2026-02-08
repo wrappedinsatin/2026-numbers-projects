@@ -62,6 +62,7 @@ def main():
             print("restarted!")
         else:
             print(f"{again} was not an valid option.")
+            again = input("would you like to generate a new sequence? y/n: ")
 
 if __name__ == "__main__":
     main()
