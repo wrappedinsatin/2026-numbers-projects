@@ -12,36 +12,36 @@ def calculator():
         print("this is the pi/e calculator!")
         pie = input("choose between pi and e!: ")
 
-        while True:
+        while pie:
             if pie in ["q", "quit", 'exit', "end"]:
-                break
-            else:
-                continue
+                calc_running = False
+                return
+            # not every if statement needs an else pairing
 
         while True:
             if pie not in ("pi", "Pi", "PI", "e", "E"):
                 print(f"{pie} is not a valid option!")
             else:
-                continue
+                break
         
         while True:
             accuracy = input("select your degree of accuracy (max 15): ")
             try: 
                 accuracy = int(accuracy)
+                if int(accuracy) > 15:
+                    print(f"{accuracy} exceeds 15!")
+                    print("the degree of accuracy must not exceed 15")
+                elif int(accuracy) < 0:
+                    print(f"{accuracy} is less than zero!")
+                    print("please select an integer between 1-15.")
             except ValueError:
                 print(f"{accuracy} is not valid")
                 print("your accuracy must be from 0-15 s.f.")
-                continue
+                break
 
         # comparison statements can't be used in except cases
         # an if statement is used instead
-        if int(accuracy) > 15:
-            print(f"{accuracy} exceeds 15!")
-            print("the degree of accuracy must not exceed 15")
-        else:
             # continue/break allowed for if statements inside while loop
-            # code carries onto next line of code
-            continue
 
         if pie in ["pi", "Pi", "PI"]:
             pie = "pi"
@@ -62,11 +62,10 @@ def main():
 
         again = input("would you like to do another calculation? (q to quit): ")
         if again in ["quit", "q"]: #again = variable
-            calc_running = False
+            break
         else:
             print("restarted!")
             print("")
-            continue
         
 
 if __name__ == "__main__":
