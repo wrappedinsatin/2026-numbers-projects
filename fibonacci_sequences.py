@@ -10,25 +10,25 @@ def user_inputs():
         print()
         sequence = input("how many numbers do you want the sequence to have?(q to quit): ") 
 
-    while True:
         if sequence.lower() in ("q", "quit", "end"):
             is_running = False
             return
 
-        try:
-            sequence = int(sequence)
-        except ValueError:
-            print(f"{sequence} was not a valid option!")
-            print("please type in an integer starting from 1.")
-        
-        if sequence == "":
-            print("type in an integer.")
-            sequence = input("how many numbers do you want the sequence to have?: ")
-        elif sequence < 1:
-            print(f"{sequence} is not valid!")
-            print("your sequence must be a natural number.")
-            print()
-            sequence = input("how many numbers do you want the sequence to have?: ")
+        while True: 
+            try:
+                sequence = int(sequence)
+                if sequence == "":
+                    print("type in an integer.")
+                    sequence = input("how many numbers do you want the sequence to have?: ")
+                elif sequence < 1:
+                    print(f"{sequence} is not valid!")
+                    print("your sequence must be a natural number.")
+                    print()
+                    sequence = input("how many numbers do you want the sequence to have?: ")
+            except ValueError:
+                print(f"{sequence} was not a valid option!")
+                print("please type in an integer starting from 1.")
+                break
 
 def fibonacci():
     fibo_list = []
