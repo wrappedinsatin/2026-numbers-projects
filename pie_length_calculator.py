@@ -39,7 +39,7 @@ def calculator():
             except ValueError:
                 print(f"{accuracy} is not valid")
                 print("your accuracy must be from 0-15 s.f.")
-            
+                accuracy = input("select your degree of accuracy (max 15): ")
 
         # comparison statements can't be used in except cases
         # an if statement is used instead
