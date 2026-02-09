@@ -5,3 +5,5 @@ projects from: karan/Projects: :page_with_curl: A list of practical projects tha
 Find Pi and E to the nth digit (COMPLETED, TESTED)
 
 Fibonacci Sequence (UPLOADED, NOT TESTED)
+
+Prime Factorisation (ONGOING)
