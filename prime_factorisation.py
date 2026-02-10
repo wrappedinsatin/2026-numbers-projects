@@ -40,7 +40,9 @@ def factorise():
 
     factors_list = []
 
-    for num in range (1, round(sqrt(number))): 
+    end_range = round(sqrt(number))
+
+    for num in range (1, end_range): 
         if number % num == 0:
             factors_list.append(num)
             num = nextprime(num) #sympy function to update num to the next prime
