@@ -6,6 +6,7 @@ import math
 
 def user_inputs():
 
+    global is_running
     is_running = True
     
     print("prime factorisation")
@@ -14,6 +15,9 @@ def user_inputs():
 
     while is_running:
         if begin in ("q", "quit", "Q", "QUIT", "Quit"):
+            is_running = False
+            return
+        elif begin in ("yes", "y", "start"):
             break
 
 def check_input():
@@ -21,6 +25,7 @@ def check_input():
     global number 
 
     while True:
+
         number = input("what number would you like to factorise?: ")
 
         try:
@@ -51,11 +56,11 @@ def factorise():
             return factors_list 
             break
 
-    print(f"your number, {number}, has these prime factors: {factors_list}")
+        print(f"your number, {number}, has these prime factors: {factors_list}")
 
 def main():
 
-     while True:
+     while is_running:
         
         user_inputs()
         check_input()
@@ -75,3 +80,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
