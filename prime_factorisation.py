@@ -6,20 +6,23 @@ from math import sqrt
 
 def user_inputs():
 
+    global is_running
     is_running = True
     
     print("prime factorisation")
     print("this program accepts a natural number from the user and returns its prime factors")
     begin = input("begin? type any key. (q to quit): ")
 
-    if begin in ("q", "quit", "Q", "QUIT", "Quit"):
-        exit()
+    while is_running:
+        if begin in ("q", "quit", "Q", "QUIT", "Quit"):
+            break
 
 def check_input():
     
     global number 
 
     while True:
+
         number = input("what number would you like to factorise?: ")
 
         try:
@@ -43,12 +46,15 @@ def factorise():
         if number % num == 0 and isprime(num):
             factors_list.append(num)
             continue
-        
-    print(f" your number, {number}, has these prime factors: {factors_list}") 
-    
+        else:
+            return factors_list 
+            break
+
+    print(f"your number, {number}, has these prime factors: {factors_list}")
+
 def main():
 
-    while True:
+     while True:
         
         user_inputs()
         check_input()
