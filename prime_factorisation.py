@@ -10,7 +10,7 @@ def user_inputs():
     
     print("prime factorisation")
     print("this program accepts a natural number from the user and returns its prime factors")
-    begin = input("begin? (q to quit): ")
+    begin = input("begin? type any key. (q to quit): ")
 
     if begin in ("q", "quit", "Q", "QUIT", "Quit"):
         exit()
@@ -46,12 +46,10 @@ def factorise():
             factors_list.append(num)
             num = nextprime(num) #sympy function to update num to the next prime
             continue
-        else:
-            return factors_list 
-            break
-
+        
+    return factors_list 
     print(f"your number, {number}, has these prime factors: {factors_list}")
-
+    
 def main():
 
     while True:
