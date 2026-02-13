@@ -6,4 +6,4 @@ Find Pi and E to the nth digit (COMPLETED, TESTED)
 
 Fibonacci Sequence (UPLOADED, NOT TESTED)
 
-Prime Factorisation (UPLOADED, NOT TESTED)
+Prime Factorisation (COMPLETED, TESTED)
