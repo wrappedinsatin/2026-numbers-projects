@@ -12,8 +12,8 @@ def user_inputs():
     entry_number = input("what number would you like to check? (q to quit): ")
 
     if entry_number.lower() in ["q", "quit"]:
-        is_running = False
-        return
+        print("exiting program...")
+        exit()
 
     try:
 
@@ -34,19 +34,17 @@ def user_inputs():
 
 def prime_finder():
 
-    if entry_number == (2, 3):
-        return True
-    
-    resultant = (entry_number + 1) / 6 or (entry_number - 1) / 6
-    if resultant % 1 == 0:
-        return True
-    else:
-        return False
-    
-    if entry_number == True:
+    if entry_number in (2, 3):
         print(f"{entry_number} IS a prime number!")
+        return
+    
+    resultant = (entry_number + 1) / 6 or (entry_number - 1) / 6 # improve later
+    if resultant % 1 == 0:
+        print(f"{entry_number} IS a prime!")
+        return
     else:
         print(f"{entry_number} is NOT a prime number!")
+        return
 
 def main():
 
