@@ -2,7 +2,7 @@
 # find all Prime Factors (if there are any) and display them.
 
 import sympy
-import math
+from math import sqrt
 
 def user_inputs():
 
@@ -55,7 +55,7 @@ def factorise():
 
 def main():
 
-     while True:
+    while True:
         
         user_inputs()
         check_input()
