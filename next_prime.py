@@ -24,11 +24,13 @@ def user_inputs():
             print("input a number greater than +2.")
             entry_number = input("what number would you like to check?: ")
 
+        else:
+            return entry_number
+
     except ValueError:
         print(f"your input, '{entry_number}' is invalid.")
         print("insert a natural number greater than one.")
 
-    return entry_number
 
 def prime_finder():
 
