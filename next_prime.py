@@ -16,20 +16,16 @@ def user_inputs():
         exit()
 
     try:
-
         entry_number = int(entry_number)
-        if entry_number < 2:
-
-            print(f"{entry_number} is less than +2!")
-            print("input a number greater than +2.")
-            entry_number = input("what number would you like to check?: ")
-
-        else:
-            return entry_number
-
     except ValueError:
-        print(f"your input, '{entry_number}' is invalid.")
-        print("insert a natural number greater than one.")
+        print(f"{entry_number} is not valid.")
+
+    if entry_number < 2:
+        print(f"{entry_number} is less than +2!")
+        print("input a number greater than +2.")
+        entry_number = input("what number would you like to check?: ")
+    else:
+        return entry_number
 
 
 def prime_finder():
@@ -38,6 +34,7 @@ def prime_finder():
         print(f"{entry_number} IS a prime number!")
         return
     
+    # use different algorithm. this can return false positives
     resultant = (entry_number + 1) / 6 or (entry_number - 1) / 6 # improve later
     if resultant % 1 == 0:
         print(f"{entry_number} IS a prime!")

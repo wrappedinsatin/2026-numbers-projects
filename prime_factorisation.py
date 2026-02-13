@@ -1,7 +1,7 @@
 # Prime Factorization - Have the user enter a number
 # find all Prime Factors (if there are any) and display them.
 
-import sympy
+from sympy import nextprime
 from math import sqrt
 
 def user_inputs():
@@ -12,9 +12,8 @@ def user_inputs():
     print("this program accepts a natural number from the user and returns its prime factors")
     begin = input("begin? (q to quit): ")
 
-    while is_running:
-        if begin in ("q", "quit", "Q", "QUIT", "Quit"):
-            break
+    if begin in ("q", "quit", "Q", "QUIT", "Quit"):
+        exit()
 
 def check_input():
     
