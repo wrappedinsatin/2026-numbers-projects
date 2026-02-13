@@ -1,7 +1,7 @@
 # Prime Factorization - Have the user enter a number
 # find all Prime Factors (if there are any) and display them.
 
-from sympy import nextprime
+from sympy import isprime
 from math import sqrt
 
 def user_inputs():
@@ -39,16 +39,12 @@ def factorise():
 
     factors_list = []
 
-    end_range = round(sqrt(number))
-
-    for num in range (1, end_range): 
-        if number % num == 0:
+    for num in range (1, number): 
+        if number % num == 0 and isprime(num):
             factors_list.append(num)
-            num = nextprime(num) #sympy function to update num to the next prime
             continue
         
-    return factors_list 
-    print(f"your number, {number}, has these prime factors: {factors_list}")
+    print(f" your number, {number}, has these prime factors: {factors_list}") 
     
 def main():
 
@@ -61,6 +57,7 @@ def main():
         again = input("would you like to factorise another number? (y/n)").lower()
 
         if again in ("n", "no", "quit"):
+            print("thanks for trying!")
             break
         elif again in ("y", "yes", "again"):
             print()
