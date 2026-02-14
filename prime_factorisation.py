@@ -2,6 +2,7 @@
 # find all Prime Factors (if there are any) and display them.
 
 from sympy import isprime
+from math import sqrt
 
 global is_running
 is_running = True
