@@ -9,4 +9,4 @@ def quit_option():
         print(f"{ask} was not valid.")
         ask = input("do you want to restart? (y/n):")
 
-quit_option()
+    quit_option()

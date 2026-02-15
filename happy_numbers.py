@@ -1,4 +1,6 @@
 
+import quit_option
+
 def what_is_happy(): # works as intended
     print()
     print("the definition of a happy number is as follows:")
@@ -40,21 +42,22 @@ def happy_checker(number: int) -> bool:
         seen.add(number)
         number = sum(int(digit) ** 2 for digit in str(number))
 
-
 def main():
     
     while True:
-
+        
+        quit_option.begin()
         what_is_happy()
         print()
         number = user_input()
-        is_happy = happy_checker(number)
+        is_happy = happy_checker(number) # arguments
         
         if is_happy: # true/false
             print(f"{number} is a HAPPY number!")
         else:
             print(f"{number} is an UNHAPPY number!")
 
+        quit_option.quit()
 
 if __name__ == "__main__":
     main()
