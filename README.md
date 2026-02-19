@@ -10,4 +10,4 @@ Prime Factorisation (COMPLETED, TESTED)
 
 Happy Numbers (COMPLETED, TESTED)
 
-Number Spellerr (ONGOING)
+Number Names (as Number Speller) (ONGOING)
