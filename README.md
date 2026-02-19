@@ -9,3 +9,5 @@ Fibonacci Sequence (UPLOADED, NOT TESTED)
 Prime Factorisation (COMPLETED, TESTED)
 
 Happy Numbers (COMPLETED, TESTED)
+
+Number Spellerr (ONGOING)
